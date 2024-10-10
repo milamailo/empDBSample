@@ -20,17 +20,20 @@ CREATE TABLE emp_info (
 -- Drop the emp_schedule table if it already exists
 DROP TABLE IF EXISTS emp_schedule;
 
--- Create the emp_schedule table
+-- Drop the emp_schedule table if it already exists
+DROP TABLE IF EXISTS emp_schedule;
+
+-- Create the emp_schedule table 
 CREATE TABLE emp_schedule (
-    sch_id INT AUTO_INCREMENT PRIMARY KEY,     
-    monday VARCHAR(50),                        
-    tuesday VARCHAR(50),                       
-    wednesday VARCHAR(50),                     
-    thursday VARCHAR(50),                      
-    friday VARCHAR(50),                        
-    saturday VARCHAR(50),                     
-    sunday VARCHAR(50),                        
-    date DATE NOT NULL,                       
+    sch_id INT AUTO_INCREMENT PRIMARY KEY,                         
+    date DATE NOT NULL,  
+    from_time TIME NOT NULL,
+    to_time TIME NOT NULL,                      
     emp_id INT NOT NULL,                                
-    FOREIGN KEY (emp_id) REFERENCES emp_info(emp_id) ON DELETE CASCADE
+    FOREIGN KEY (emp_id) REFERENCES emp_info(emp_id) ON DELETE CASCADE,
+    CONSTRAINT chk_time_range CHECK (from_time < to_time) -- Ensures 'from' time is earlier than 'to' time
 );
+
+-- Ensure no duplicate rows per employee with the same 'from' and 'to' times on the same date
+CREATE UNIQUE INDEX idx_unique_schedule ON emp_schedule (date, from_time, to_time, emp_id);
+

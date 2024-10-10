@@ -1,44 +1,73 @@
 -- Insert schedules for some of the employees
-INSERT INTO emp_schedule (monday, tuesday, wednesday, thursday, friday, saturday, sunday, date, emp_id)
-VALUES
-('9am-5pm', '9am-5pm', '9am-5pm', '9am-5pm', '9am-5pm', 'OFF', 'OFF', '2024-10-01', 1),
-('9am-5pm', '9am-5pm', '9am-5pm', '9am-5pm', '9am-5pm', 'OFF', 'OFF', '2024-10-08', 1),
-('9am-5pm', '9am-5pm', '9am-5pm', '9am-5pm', '9am-5pm', 'OFF', 'OFF', '2024-10-15', 1);
 
-INSERT INTO emp_schedule (monday, tuesday, wednesday, thursday, friday, saturday, sunday, date, emp_id)
+-- Employee 1
+INSERT INTO emp_schedule (date, from_time, to_time, emp_id)
 VALUES
-('8am-4pm', '8am-4pm', '8am-4pm', '8am-4pm', 'OFF', 'OFF', 'OFF', '2024-10-02', 2),
-('8am-4pm', '8am-4pm', '8am-4pm', '8am-4pm', 'OFF', 'OFF', 'OFF', '2024-10-09', 2),
-('8am-4pm', '8am-4pm', '8am-4pm', '8am-4pm', 'OFF', 'OFF', 'OFF', '2024-10-16', 2),
-('8am-4pm', '8am-4pm', '8am-4pm', '8am-4pm', 'OFF', 'OFF', 'OFF', '2024-10-23', 2);
+('2024-10-01', '09:00:00', '13:00:00', 1),
+('2024-10-01', '14:00:00', '17:00:00', 1),
+('2024-10-08', '09:00:00', '13:00:00', 1),
+('2024-10-08', '14:00:00', '17:00:00', 1),
+('2024-10-15', '09:00:00', '13:00:00', 1),
+('2024-10-15', '14:00:00', '17:00:00', 1);
 
-INSERT INTO emp_schedule (monday, tuesday, wednesday, thursday, friday, saturday, sunday, date, emp_id)
+-- Employee 2
+INSERT INTO emp_schedule (date, from_time, to_time, emp_id)
 VALUES
-('7am-3pm', '7am-3pm', '7am-3pm', '7am-3pm', '7am-3pm', 'OFF', 'OFF', '2024-10-03', 4),
-('7am-3pm', '7am-3pm', '7am-3pm', '7am-3pm', '7am-3pm', 'OFF', 'OFF', '2024-10-10', 4),
-('7am-3pm', '7am-3pm', '7am-3pm', '7am-3pm', '7am-3pm', 'OFF', 'OFF', '2024-10-17', 4);
+('2024-10-02', '08:00:00', '12:00:00', 2),
+('2024-10-02', '13:00:00', '16:00:00', 2),
+('2024-10-09', '08:00:00', '12:00:00', 2),
+('2024-10-09', '13:00:00', '16:00:00', 2),
+('2024-10-16', '08:00:00', '12:00:00', 2),
+('2024-10-16', '13:00:00', '16:00:00', 2);
 
-INSERT INTO emp_schedule (monday, tuesday, wednesday, thursday, friday, saturday, sunday, date, emp_id)
+-- Employee 4
+INSERT INTO emp_schedule (date, from_time, to_time, emp_id)
 VALUES
-('10am-6pm', '10am-6pm', '10am-6pm', '10am-6pm', '10am-6pm', 'OFF', 'OFF', '2024-10-04', 5),
-('10am-6pm', '10am-6pm', '10am-6pm', '10am-6pm', '10am-6pm', 'OFF', 'OFF', '2024-10-11', 5),
-('10am-6pm', '10am-6pm', '10am-6pm', '10am-6pm', '10am-6pm', 'OFF', 'OFF', '2024-10-18', 5);
+('2024-10-03', '07:00:00', '11:00:00', 4),
+('2024-10-03', '12:00:00', '15:00:00', 4),
+('2024-10-10', '07:00:00', '11:00:00', 4),
+('2024-10-10', '12:00:00', '15:00:00', 4),
+('2024-10-17', '07:00:00', '11:00:00', 4),
+('2024-10-17', '12:00:00', '15:00:00', 4);
 
-INSERT INTO emp_schedule (monday, tuesday, wednesday, thursday, friday, saturday, sunday, date, emp_id)
+-- Employee 5
+INSERT INTO emp_schedule (date, from_time, to_time, emp_id)
 VALUES
-('6am-2pm', '6am-2pm', '6am-2pm', '6am-2pm', '6am-2pm', 'OFF', 'OFF', '2024-10-05', 6),
-('6am-2pm', '6am-2pm', '6am-2pm', '6am-2pm', '6am-2pm', 'OFF', 'OFF', '2024-10-12', 6),
-('6am-2pm', '6am-2pm', '6am-2pm', '6am-2pm', '6am-2pm', 'OFF', 'OFF', '2024-10-19', 6),
-('6am-2pm', '6am-2pm', '6am-2pm', '6am-2pm', '6am-2pm', 'OFF', 'OFF', '2024-10-26', 6);
+('2024-10-04', '10:00:00', '14:00:00', 5),
+('2024-10-04', '15:00:00', '18:00:00', 5),
+('2024-10-11', '10:00:00', '14:00:00', 5),
+('2024-10-11', '15:00:00', '18:00:00', 5),
+('2024-10-18', '10:00:00', '14:00:00', 5),
+('2024-10-18', '15:00:00', '18:00:00', 5);
 
-INSERT INTO emp_schedule (monday, tuesday, wednesday, thursday, friday, saturday, sunday, date, emp_id)
+-- Employee 6
+INSERT INTO emp_schedule (date, from_time, to_time, emp_id)
 VALUES
-('12pm-8pm', '12pm-8pm', '12pm-8pm', '12pm-8pm', '12pm-8pm', 'OFF', 'OFF', '2024-10-06', 9),
-('12pm-8pm', '12pm-8pm', '12pm-8pm', '12pm-8pm', '12pm-8pm', 'OFF', 'OFF', '2024-10-13', 9),
-('12pm-8pm', '12pm-8pm', '12pm-8pm', '12pm-8pm', '12pm-8pm', 'OFF', 'OFF', '2024-10-20', 9);
+('2024-10-05', '06:00:00', '10:00:00', 6),
+('2024-10-05', '11:00:00', '14:00:00', 6),
+('2024-10-12', '06:00:00', '10:00:00', 6),
+('2024-10-12', '11:00:00', '14:00:00', 6),
+('2024-10-19', '06:00:00', '10:00:00', 6),
+('2024-10-19', '11:00:00', '14:00:00', 6),
+('2024-10-26', '06:00:00', '10:00:00', 6),
+('2024-10-26', '11:00:00', '14:00:00', 6);
 
-INSERT INTO emp_schedule (monday, tuesday, wednesday, thursday, friday, saturday, sunday, date, emp_id)
+-- Employee 9
+INSERT INTO emp_schedule (date, from_time, to_time, emp_id)
 VALUES
-('1pm-9pm', '1pm-9pm', '1pm-9pm', '1pm-9pm', '1pm-9pm', 'OFF', 'OFF', '2024-10-07', 11),
-('1pm-9pm', '1pm-9pm', '1pm-9pm', '1pm-9pm', '1pm-9pm', 'OFF', 'OFF', '2024-10-14', 11),
-('1pm-9pm', '1pm-9pm', '1pm-9pm', '1pm-9pm', '1pm-9pm', 'OFF', 'OFF', '2024-10-21', 11);
+('2024-10-06', '12:00:00', '16:00:00', 9),
+('2024-10-06', '17:00:00', '20:00:00', 9),
+('2024-10-13', '12:00:00', '16:00:00', 9),
+('2024-10-13', '17:00:00', '20:00:00', 9),
+('2024-10-20', '12:00:00', '16:00:00', 9),
+('2024-10-20', '17:00:00', '20:00:00', 9);
+
+-- Employee 11
+INSERT INTO emp_schedule (date, from_time, to_time, emp_id)
+VALUES
+('2024-10-07', '13:00:00', '17:00:00', 11),
+('2024-10-07', '18:00:00', '21:00:00', 11),
+('2024-10-14', '13:00:00', '17:00:00', 11),
+('2024-10-14', '18:00:00', '21:00:00', 11),
+('2024-10-21', '13:00:00', '17:00:00', 11),
+('2024-10-21', '18:00:00', '21:00:00', 11);
